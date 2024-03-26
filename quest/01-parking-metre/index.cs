@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,10 +11,16 @@ namespace HELLO_WORLD {
     {
         static void Main(string[] args)
         {
-            for (float i = 0; i < 3; i ++)
-            { byte money = 0;
+            float[] n = new float[3];
+            for (int i = 0; i < 3; i++)
+            {
                 float num = 0;
                 num = float.Parse(Console.ReadLine());
+                n[i] = num;
+            }
+            foreach (float num in n)
+            {
+                byte money = 0;
                 if (num <= 3)
                 {
                     money = 2;
@@ -26,13 +33,13 @@ namespace HELLO_WORLD {
                 {
                     money = 10;
                 }
-                else {
+                else
+                {
                     Console.WriteLine("Fuck off");
                     continue;
-
                 };
-            Console.WriteLine(money);
-            };
+                Console.WriteLine(money);
+            }
             Console.ReadKey();
         }
        
