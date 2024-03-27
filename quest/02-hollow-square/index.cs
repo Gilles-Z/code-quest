@@ -14,8 +14,17 @@ namespace HELLO_WORLD
         {
 
             int num = 0;
-            num = int.Parse(Console.ReadLine());
+            
             int n = 0; int m = 0;
+            do
+            {
+                Console.Write("Length of the square's side (1~20): ");
+                num = int.Parse(Console.ReadLine());
+
+
+
+            } while (num < 1 || num > 20);
+            
             while (n < num)
             {
                 Console.Write("@");
